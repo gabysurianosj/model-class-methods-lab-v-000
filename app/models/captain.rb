@@ -21,4 +21,3 @@ cclass Captain < ActiveRecord::Base
   def self.motorboats
     joins(boats: :classifications).where(Classification.arel_table[:name].eq("Motorboat"))
   end
-end
